@@ -3,31 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Invitación Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lora', serif;
             background: #f9f9f9;
             text-align: center;
             padding: 40px;
         }
         .card {
-            background: white;
+            background: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') no-repeat center center;
+            background-size: cover;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             padding: 30px;
-            max-width: 500px;
+            max-width: 600px;
             margin: auto;
+            position: relative;
+            color: white;
         }
-        img {
-            width: 100%;
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Capa semitransparente para legibilidad */
             border-radius: 12px;
+            z-index: 1;
+        }
+        .card > * {
+            position: relative;
+            z-index: 2; /* Contenido encima de la capa */
         }
         h1 {
-            color: #333;
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin-bottom: 20px;
         }
         p {
-            color: #666;
+            font-family: 'Lora', serif;
             font-size: 18px;
+            line-height: 1.6;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         }
         .btn {
             display: inline-block;
@@ -37,20 +59,41 @@
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            font-weight: bold;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
         }
         .btn:hover {
             background: #1ebe57;
+        }
+        a {
+            color: #e6c9ff; /* Color más suave y elegante para enlaces */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 <div class="card">
-    <img src="https://picsum.photos/500/200" alt="Imagen de invitación">
-    <h1>¡Estás Invitado!</h1>
-    <p>Te esperamos el <b>15 de Septiembre a las 7:00 PM</b> en nuestra celebración especial 🎉</p>
-    <p>Lugar: Av. Principal 123, Lima - Perú</p>
-    <a class="btn" href="https://wa.me/51999999999?text=Confirmo%20mi%20asistencia%20a%20la%20invitación">Confirmar por WhatsApp</a>
+    <h1>¡Queremos compartir contigo nuestro momento especial!</h1>
+    <p>
+        Por eso te invitamos a <b>Nuestra Boda</b><br>
+        <b>Christel & Brian</b><br>
+        Testigos: Gabriela Rodriguez Tenorio y Harold Jara Valentin<br>
+        <b>Viernes 12 de setiembre a las 1:30pm</b> en la Agencia Municipal Canto Grande<br>
+        Ubicación: <a href="https://www.google.com/maps/place/DEMUNA/@-11.972497,-77.0052131,20z/data=!4m9!1m2!2m1!1sagencia+municipal!3m5!1s0x9105c566e0317369:0x97ad508f938cb3e4!8m2!3d-11.9726863!4d-77.004879!16s%2Fg%2F11ddxq_ln4?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en Google Maps</a>
+    </p>
+    <p>
+        Luego sírvanse a pasar a:<br>
+        <b>Museo Larco Cafe-Restaurante a las 5:00pm</b><br>
+        Ubicación: <a href="https://www.google.com/maps/place/Cafe+Museo+Larco/@-12.0729836,-77.0723147,16.75z/data=!4m14!1m7!3m6!1s0x9105c910e3a37f47:0x251c3e84091ae12b!2sCafe+Museo+Larco!8m2!3d-12.072271!4d-77.0707192!16s%2Fg%2F11clzwt2v1!3m5!1s0x9105c910e3a37f47:0x251c3e84091ae12b!8m2!3d-12.072271!4d-77.0707192!16s%2Fg%2F11clzwt2v1?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ver en Google Maps</a>
+    </p>
+    <a class="btn" href="https://wa.me/51946262206?text=Confirmo%20mi%20asistencia%20a%20la%20invitación" target="_blank">
+        Confirmar por WhatsApp
+    </a>
 </div>
 </body>
 </html>
